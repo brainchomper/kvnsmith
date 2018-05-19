@@ -6,12 +6,6 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 const http = require('http');
 
-http.createServer(function(request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end("Hello, World!\n");
-}).listen(process.env.PORT);
-
-console.log('App is running...');
 // var db = require("./models");
 app.use(express.static(path.join(__dirname, 'public')));
 
