@@ -5,8 +5,10 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 const http = require('http');
+const app = require('./app');
+const http = require('http');
 
-http.createServer(app).listen(process.env.PORT);
+
 // var db = require("./models");
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -22,11 +24,11 @@ app.set("view engine", "handlebars");
 
 require("./routes/html.js")(app);
 // require("./routes/api.js")(app);
-
+http.createServer(app).listen(process.env.PORT);
 // db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+  // app.listen(PORT, function() {
+  //   console.log("App listening on PORT " + PORT);
+  // });
 // });
 
 // <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">  font
