@@ -6,6 +6,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 const http = require('http');
 
+http.createServer(app).listen(process.env.PORT);
 // var db = require("./models");
 app.use(express.static(path.join(__dirname, 'public')));
 
