@@ -7,6 +7,7 @@ var PORT = process.env.PORT || 8080;
 const http = require('http');
 // const app = require('./app');
 const http = require('http');
+app.use(express.static(path.join(__dirname, '/')));
 
 
 // var db = require("./models");
