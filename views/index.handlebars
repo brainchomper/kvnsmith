@@ -1,58 +1,200 @@
-<div class="row mainGame">
+	<header>
 
-	<div class="col"></div>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color scrolling-navbar">
+			<a class="navbar-brand" href="#">
+				<img class="img-fluid" src="./images/logo_sm.png" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a href="" target="blank" class="nav-link" href="#">About Me
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a  data-toggle="modal" data-target="#modalContactForm" class="nav-link">Contact Me</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav nav-flex-icons">
+					<li class="nav-item">
+						<a href="https://github.com/brainchomper" target="blank" class="nav-link">
+							<i class="fab fa-github"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link">
+							<i class="fab fa-slack"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="https://stackoverflow.com/users/9217650/kevin-smith?tab=profile" target="blank" class="nav-link">
+							<i class="fab fa-stack-overflow"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="https://www.linkedin.com/in/kvnsmith/" target="blank" class="nav-link">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a data-toggle="modal" data-target="#modalContactForm" class="nav-link" data-placement="right" title="Tooltip on right">
+							<i class="fas fa-at"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="https://twitter.com/_kvnsmith" target="blank" class="nav-link">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-	<div class="col mainpage-col">
-		<img src="./images/broken-moon.png" class="img-fluid" alt="Broken Moon">
-		<img src="./images/brokenmoontitle.png" class="img-fluid" alt="Broken Moon">
-		<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	</header>
+	<!--Carousel Wrapper-->
+	<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
 
+		<!--Slides-->
+		<div class="carousel-inner" role="listbox">
+			<!--First slide-->
+			<div class="carousel-item active">
+				<container class="flex-center text-center align-middle">
+					<img class="d-block w-100 img1" src="./images/galaxy.jpg">
+
+					<div class="carousel-caption">
+						<h1 class="h1-responsive typewrite align-top" data-period="2000" data-type='[ "Hi, I&#8217m Kevin Smith.", "I&#8217m Creative.", "I Love Design.", "I Love to Develop." ]'></h1>
+
+					</div>
+				</container>
+
+			</div>
+			<!--/First slide-->
+
+		</div>
+		<!--/.Slides-->
 	</div>
+	<div class="container-fluid main">
 
-	<div class="col"></div>
 
-</div>
+		<!-- contact -->
 
-{{!-- JS --}}
-<script>
-	var cookie = Cookies.get();
-	console.log("cookie ----" + cookie);
-	//google auth code 
-	function onSignIn(googleUser) {
-		var profile = googleUser.getBasicProfile();
-		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-		console.log('Name: ' + profile.getName());
-		console.log('Image URL: ' + profile.getImageUrl());
-		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-		// The ID token you need to pass to your backend:
-//		var user_id = googleUser.getAuthResponse().id_token;
-	//	console.log("ID Token: " + id_token);
-		var id_token = profile.getId();
-		Cookies.set('id_token', id_token);
+		<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h4 class="modal-title w-100 font-weight-bold">Drop me a line!</h4>
+					</div>
+					<form action="" method="post" id="commentform">
+					<div class="modal-body mx-3">
+						<div class="md-form mb-5">
+							<i class="fa fa-user prefix grey-text"></i>
+							<input type="text" id="name" name="name" class="form-control validate" required>
+							<label data-error="" data-success="" for="name">Your name</label>
+						</div>
 
-		dbCall();
-		function dbCall() {
-			$.ajax({
-				url: "/api/user",
-				type: "POST",
-				data: {
-					user_id: profile.getId(),
-					user_name: profile.getName(),
-					user_email: profile.getEmail(),
-					user_photo: profile.getImageUrl()
-				},
+						<div class="md-form mb-5">
+							<i class="fas fa-at prefix grey-text"></i>
+							<input type="email" id="email" class="form-control validate" required>
+							<label data-error="Email!" data-success="" for="email">Your email</label>
+						</div>
 
-			}).then(function (data) {
-				location.href = "/menu";
-			});
-		}
-	}// end google auth
+						<div class="md-form mb-5">
+							<i class="fa fa-tag prefix grey-text"></i>
+							<input type="text" id="subject" class="form-control validate" required>
+							<label data-error="" data-success="" for="subject">Subject</label>
+						</div>
 
-	//logout
-	function signOut() {
-		var logout = function () {
-			Cookies.remove('id_token');
-			document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=https://the-broken-moon-herokuapp.com"
-		}
-	}//end logout
-</script>
+						<div class="md-form">
+							<i class="fas fa-comment-alt prefix grey-text"></i>
+							<textarea type="text" id="message" class="md-textarea form-control" rows="4" required></textarea>
+							<label data-error="" data-success="" for="message" class="align-middle">Your message</label>
+						</div>
+
+					</div>
+
+					<div class="modal-footer d-flex justify-content-center">
+							<div class="g-recaptcha invisible"
+							data-sitekey="6LeDiVcUAAAAAEXnqZivZ5nrPvvwQcE1h_WC8V7v"
+							data-callback="submitMyForm"
+							data-size="invisible">
+					</div>
+						<button class="btn btn-unique" id="submit">Send
+							<i class="fas fa-share-square prefix white-text"></i>
+						</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm">Contact Me</a>
+		</div>
+
+		<!-- /contact -->
+		<!-- end container fluid -->
+	</div>
+	<!--Footer-->
+	<footer class="page-footer font-small unique-color pt-0 fixed-bottom">
+
+		<!--Footer Links-->
+		<div class="container">
+
+			<!--First row-->
+			<div class="row">
+
+				<!--First column-->
+				<div class="col-md-12">
+
+					<div class="mb-5 flex-center">
+
+						<!--github-->
+						<a href="https://github.com/brainchomper" target="blank">
+							<i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+						</a>
+						<!-- stackOverflow -->
+						<a href="https://stackoverflow.com/users/9217650/kevin-smith?tab=profile" target="blank" class="nav-link">
+							<i class="fab fa-stack-overflow fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+						</a>
+						<!-- slack -->
+						<a class="nav-link">
+							<i class="fab fa-slack fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+							</a>
+							<!--Linkedin-->
+							<a href="https://www.linkedin.com/in/kvnsmith/" target="blank" class="li-ic">
+								<i class="fab fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+							</a>
+							<!--Twitter-->
+							<a href="https://twitter.com/_kvnsmith" target="blank" class="tw-ic">
+								<i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+							</a>
+									<a data-toggle="modal" data-target="#modalContactForm" class="na">
+										<i class="fas fa-at fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+									</a>
+								
+					</div>
+				</div>
+				<!--/First column-->
+			</div>
+			<!--/First row-->
+		</div>
+		<!--/Footer Links-->
+
+		<!--Copyright-->
+		<div class="footer-copyright py-3 text-center">
+			<div class="container-fluid">
+				© 2018
+				<a href="https://kvnsmith.com"> Kevin Smith</a>
+			</div>
+		</div>
+		<!--/Copyright-->
+
+	</footer>
+	<!--/Footer-->
