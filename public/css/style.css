@@ -9,6 +9,20 @@ body{
 .container{
 	width: 100%;
 }
+.mainContent{
+	width: 80%;
+	margin: auto;
+	margin-top: 105px;
+}
+.rowContent{
+	margin-top: 20px;
+}
+.btmRow{
+	margin-bottom: 180px;
+}
+.nav{
+	margin-bottom: 50px;
+}
 .main{
 	width: 75%;
 	margin-top: 100px;

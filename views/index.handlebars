@@ -1,63 +1,4 @@
-	<header>
-
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color scrolling-navbar">
-			<a class="navbar-brand" href="#">
-				<img class="img-fluid" src="./images/logo_sm.png" alt="">
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-			 aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a href="" target="blank" class="nav-link" href="#">About Me
-							<span class="sr-only">(current)</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a  data-toggle="modal" data-target="#modalContactForm" class="nav-link">Contact Me</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav nav-flex-icons">
-					<li class="nav-item">
-						<a href="https://github.com/brainchomper" target="blank" class="nav-link">
-							<i class="fab fa-github"></i>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link">
-							<i class="fab fa-slack"></i>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="https://stackoverflow.com/users/9217650/kevin-smith?tab=profile" target="blank" class="nav-link">
-							<i class="fab fa-stack-overflow"></i>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="https://www.linkedin.com/in/kvnsmith/" target="blank" class="nav-link">
-							<i class="fab fa-linkedin-in"></i>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a data-toggle="modal" data-target="#modalContactForm" class="nav-link" data-placement="right" title="Tooltip on right">
-							<i class="fas fa-at"></i>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="https://twitter.com/_kvnsmith" target="blank" class="nav-link">
-							<i class="fab fa-twitter"></i>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-	</header>
+{{>nav}}
 	<!--Carousel Wrapper-->
 	<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -69,7 +10,7 @@
 					<img class="d-block w-100 img1" src="./images/galaxy.jpg">
 
 					<div class="carousel-caption">
-						<h1 class="h1-responsive typewrite align-top" data-period="2000" data-type='[ "Hi, I&#8217m Kevin Smith.", "I&#8217m Creative.", "I Love Design.", "I Love to Develop." ]'></h1>
+						<h1 class="h1-responsive typewrite align-top" data-period="2000" data-type='[ "Hi, I&#8217m Kevin Smith.", "I&#8217m Hard Working, Creative, and a bit shy...", "I Love Design.", "I Love to Develop." ]'></h1>
 
 					</div>
 				</container>
@@ -141,60 +82,4 @@
 		<!-- /contact -->
 		<!-- end container fluid -->
 	</div>
-	<!--Footer-->
-	<footer class="page-footer font-small unique-color pt-0 fixed-bottom">
-
-		<!--Footer Links-->
-		<div class="container">
-
-			<!--First row-->
-			<div class="row">
-
-				<!--First column-->
-				<div class="col-md-12">
-
-					<div class="mb-5 flex-center">
-
-						<!--github-->
-						<a href="https://github.com/brainchomper" target="blank">
-							<i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-						</a>
-						<!-- stackOverflow -->
-						<a href="https://stackoverflow.com/users/9217650/kevin-smith?tab=profile" target="blank" class="nav-link">
-							<i class="fab fa-stack-overflow fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-						</a>
-						<!-- slack -->
-						<a class="nav-link">
-							<i class="fab fa-slack fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-							</a>
-							<!--Linkedin-->
-							<a href="https://www.linkedin.com/in/kvnsmith/" target="blank" class="li-ic">
-								<i class="fab fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-							</a>
-							<!--Twitter-->
-							<a href="https://twitter.com/_kvnsmith" target="blank" class="tw-ic">
-								<i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-							</a>
-									<a data-toggle="modal" data-target="#modalContactForm" class="na">
-										<i class="fas fa-at fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-									</a>
-								
-					</div>
-				</div>
-				<!--/First column-->
-			</div>
-			<!--/First row-->
-		</div>
-		<!--/Footer Links-->
-
-		<!--Copyright-->
-		<div class="footer-copyright py-3 text-center">
-			<div class="container-fluid">
-				© 2018
-				<a href="https://kvnsmith.com"> Kevin Smith</a>
-			</div>
-		</div>
-		<!--/Copyright-->
-
-	</footer>
-	<!--/Footer-->
+{{>footer}}
