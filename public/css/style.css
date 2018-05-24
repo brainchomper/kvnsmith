@@ -1,17 +1,21 @@
-html{
+html {
 	font-family: 'Roboto', sans-serif;
 }
-body{
+
+body {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 }
-.container{
+
+.container {
 	width: 100%;
 }
-.card{
+
+.card {
 	margin-bottom: 10px;
 }
+
 .carousel-caption {
 	position: absolute;
 	z-index: 10;
@@ -23,32 +27,40 @@ body{
 	color: #fff;
 	text-align: center;
 }
-.heading{
+
+.heading {
 	font-weight: bold;
 }
-.carousel{
+
+.carousel {
 	margin-top: 85px;
 }
-.mainContent{
+
+.mainContent {
 	width: 80%;
 	margin: auto;
 	margin-top: 105px;
 }
-.rowContent{
+
+.rowContent {
 	margin-top: 20px;
 }
+
 /* .btmRow{
 	margin-bottom: 20px;
 } */
-.nav{
+
+.nav {
 	margin-bottom: 50px;
 }
-.main{
+
+.main {
 	width: 80%;
-	margin-top: 100px;
-margin-bottom: 100px;
+	margin-top: 20px;
+	/* margin-bottom: 20px; */
 }
-.imgBox{
+
+.imgBox {
 	background-image: url("../images/milky-way-2695569_1920.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -57,33 +69,38 @@ margin-bottom: 100px;
 	width: 100%;
 	height: 100%;
 }
-.page-footer{
+
+.page-footer {
 	margin-top: 10px;
 }
-.contact{
+
+.contact {
 	background-color: #3F729B;
 	color: white;
 	text-decoration: white;
 }
-a.contact{
+
+a.contact {
 	text-decoration-color: white;
 }
-/* .footer-copyright{
 
-} */
-.textwrite{
+.textwrite {
 	text-align: center;
 	color: white;
 	font-weight: 300;
 }
-.carousel-caption{
-	margin-bottom: 75px;
+
+.carousel-caption {
+	position: absolute;
+	top: 35%;
 }
-.wrap{
+
+.wrap {
 	animation: caret .5s steps(1) infinite;
 }
+
 @keyframes caret {
-  50% {
-    border-color: transparent;
-  }
+	50% {
+		border-color: transparent;
+	}
 }
