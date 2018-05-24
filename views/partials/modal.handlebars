@@ -1,0 +1,51 @@
+		<!-- contact -->
+
+		<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h4 class="modal-title w-100 font-weight-bold">Drop me a line!</h4>
+					</div>
+					<form action="" method="post" id="commentform">
+					<div class="modal-body mx-3">
+						<div class="md-form mb-5">
+							<i class="fa fa-user prefix grey-text"></i>
+							<input type="text" id="name" name="name" class="form-control validate" required>
+							<label data-error="" data-success="" for="name">Your name</label>
+						</div>
+
+						<div class="md-form mb-5">
+							<i class="fas fa-at prefix grey-text"></i>
+							<input type="email" id="email" class="form-control validate" required>
+							<label data-error="Email!" data-success="" for="email">Your email</label>
+						</div>
+
+						<div class="md-form mb-5">
+							<i class="fa fa-tag prefix grey-text"></i>
+							<input type="text" id="subject" class="form-control validate" required>
+							<label data-error="" data-success="" for="subject">Subject</label>
+						</div>
+
+						<div class="md-form">
+							<i class="fas fa-comment-alt prefix grey-text"></i>
+							<textarea type="text" id="message" class="md-textarea form-control" rows="4" required></textarea>
+							<label data-error="" data-success="" for="message" class="align-middle">Your message</label>
+						</div>
+
+					</div>
+
+					<div class="modal-footer d-flex justify-content-center">
+							<div class="g-recaptcha invisible"
+							data-sitekey="6LeDiVcUAAAAAEXnqZivZ5nrPvvwQcE1h_WC8V7v"
+							data-callback="submitMyForm"
+							data-size="invisible">
+					</div>
+						<button class="btn btn-unique" id="submit">Send
+							<i class="fas fa-share-square prefix white-text"></i>
+						</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /contact -->
