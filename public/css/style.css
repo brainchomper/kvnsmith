@@ -89,10 +89,13 @@ a.contact {
 	color: white;
 	font-weight: 300;
 }
-
+.carousel{
+	margin-top: 80px;
+}
 .carousel-caption {
-	position: absolute;
-	top: 35%;
+	/* position: absolute; */
+margin-top: 1px;
+	/* top: 15%; */
 }
 
 .wrap {
