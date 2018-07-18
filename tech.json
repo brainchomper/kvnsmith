@@ -1,0 +1,40 @@
+[
+	{
+	"name":"HTML5",
+	"image":"./public/images/html5.png"
+},
+{
+	"name":"CSS3",
+	"image":"./public/images/css3.png"
+},{
+	"name":"GIT",
+	"image":"./public/images/git.png"
+},{
+	"name":"JavaScript",
+	"image":"./public/images/js.png"
+},{
+	"name":"Google",
+	"image":"./public/images/google.png"
+},{
+	"name":"Bootstrap",
+	"image":"./public/images/bootstrap.png"
+},{
+	"name":"Node",
+	"image":"./public/images/node.png"
+},{
+	"name":"React",
+	"image":"./public/images/.png"
+},{
+	"name":"MySQL",
+	"image":"./public/images/mysql.png"
+},{
+	"name":"MongoDB",
+	"image":"./public/images/mongo.png"
+},{
+	"name":"CMD Line",
+	"image":"./public/images/command-line.png"
+},{
+	"name":"Wordpress",
+	"image":"./public/images/wordpress.png"
+}
+]
